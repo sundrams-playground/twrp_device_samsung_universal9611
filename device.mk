@@ -1,6 +1,9 @@
 #Dynamic Partition Flag
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Lpdump
+TW_EXCLUDE_LPDUMP := true
+
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd \
