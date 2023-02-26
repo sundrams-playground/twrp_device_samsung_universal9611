@@ -4,6 +4,8 @@
 #
 # Use this to prime your device after installing TWRP.
 
+ANDROID_ROOT=/system_root
+
 if [ "$1" == "execute" ]; then
 
    md5() {
@@ -164,7 +166,7 @@ if [ "$1" == "execute" ]; then
 
      echo " - Disabling restoration of stock recovery..."
 
-     for i in $ANDROID_ROOT $ANDROID_ROOT/system; do
+     for i in $ANDROID_ROOT/system /vendor /vendor/etc; do
        if [ -f $i/$r~ ]; then
         echo " -   ...already disabled."
         found=true
