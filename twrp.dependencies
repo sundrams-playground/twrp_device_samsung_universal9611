@@ -1,8 +1,0 @@
-[
-  {
-    "remote": "github",
-    "repository": "A51-development/kernel_samsung_a51",
-    "target_path": "kernel/samsung/a51",
-    "branch": "aosp"
-  },
-]
