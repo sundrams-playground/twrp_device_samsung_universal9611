@@ -1,4 +1,4 @@
-## TWRP device tree for the Samsung A515F.
+## TWRP device tree for the Samsung P615.
 
 ## How-to compile it:
 
@@ -6,5 +6,7 @@ To build:
 
 ```sh
 . build/envsetup.sh
-lunch twrp_a51-eng
+export ALLOW_MISSING_DEPENDENCIES=true
+lunch twrp_gta4xl-eng
 mka recoveryimage
+```

@@ -10,7 +10,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-DEVICE_PATH := device/samsung/a51
+DEVICE_PATH := device/samsung/gta4xl
 
 # Architecture
 TARGET_ARCH := arm64
@@ -24,6 +24,8 @@ TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
+
+TARGET_SUPPORTS_64_BIT_APPS := true
 
 # Bootloader
 BOARD_VENDOR := samsung
@@ -62,16 +64,13 @@ TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
-TW_MAX_BRIGHTNESS := 365
+TW_MAX_BRIGHTNESS := 306
 TW_DEFAULT_BRIGHTNESS := 219
-TW_Y_OFFSET := 98
-TW_H_OFFSET := -98
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_EXTRA_LANGUAGES := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-TW_DEVICE_VERSION := GrassKernel
-TW_USE_SAMSUNG_HAPTICS := true
+TW_DEVICE_VERSION := DragonFox
 
 BOARD_SUPER_PARTITION_SIZE := 6365921848
 BOARD_SUPER_PARTITION_GROUPS := google_dynamic_partitions
