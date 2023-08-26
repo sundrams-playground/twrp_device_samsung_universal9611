@@ -1,4 +1,3 @@
-# Copyright (C) 2016 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,12 +10,23 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-ifneq ($(filter gta4xl m31,$(TARGET_DEVICE)),)
+DEVICE_PATH := device/samsung/universal9611
+DEVICE := m31
 
-LOCAL_PATH := $(call my-dir)
+# Kernel
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/$(DEVICE)/prebuilt/Image
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/$(DEVICE)/prebuilt/recovery_dtbo
+BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/$(DEVICE)/prebuilt/dtb
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
+# Recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/$(DEVICE)/rootdir/recovery.fstab
 
-endif
+# TWRP flags
+TW_MAX_BRIGHTNESS := 365
+TW_Y_OFFSET := 78
+TW_H_OFFSET := -78
+TW_USE_SAMSUNG_HAPTICS := true
 
+include $(DEVICE_PATH)/BoardConfig.mk

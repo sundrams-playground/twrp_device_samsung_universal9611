@@ -1,4 +1,3 @@
-# Copyright (C) 2016 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,12 +10,12 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-ifneq ($(filter gta4xl m31,$(TARGET_DEVICE)),)
+DEVICE_PATH := device/samsung/universal9611
+$(call inherit-product, device/samsung/universal9611/device.mk)
 
-LOCAL_PATH := $(call my-dir)
-
-include $(call all-makefiles-under,$(LOCAL_PATH))
-
-endif
+# Recovery Fstab
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/m31/rootdir/twrp.flags:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/twrp.flags
 
