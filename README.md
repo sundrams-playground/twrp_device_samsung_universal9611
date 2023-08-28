@@ -3,6 +3,7 @@ Current targets:
 - gta4xl
 - m31
 - m31s
+- a51
 
 ## How-to compile it:
 
