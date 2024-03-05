@@ -5,7 +5,7 @@ Current targets:
 - m31
 - m31s
 - a51
-
+- m30s
 ## How-to compile it:
 
 To build:
@@ -13,7 +13,7 @@ To build:
 ```sh
 . build/envsetup.sh
 export ALLOW_MISSING_DEPENDENCIES=true
-lunch twrp_gta4xl-eng
+lunch twrp_device-eng
 mka recoveryimage
 ```
 

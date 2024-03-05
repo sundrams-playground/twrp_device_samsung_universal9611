@@ -38,10 +38,10 @@ BOARD_KERNEL_PAGESIZE := 2048
 LZMA_RAMDISK_TARGETS := recovery,boot
 BOARD_RAMDISK_USE_LZMA := true
 BOARD_KERNEL_CMDLINE := androidboot.hardware=exynos9611
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --header_version 2 --board SRPSG30B004RU
+#BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --header_version 2 --board SRPSG30B004RU
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-BOARD_KERNEL_IMAGE_NAME := Image
+#BOARD_KERNEL_IMAGE_NAME := Image
 
 # Platform
 TARGET_BOARD_PLATFORM := exynos9611
