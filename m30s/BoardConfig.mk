@@ -16,8 +16,8 @@ DEVICE_PATH := device/samsung/universal9611
 DEVICE := m30s
 
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/$(DEVICE)/prebuilt/recovery_dtbo
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/$(DEVICE)/prebuilt/zImage
-BOARD_KERNEL_IMAGE_NAME := zImage
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/$(DEVICE)/prebuilt/Image
+BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --header_version 1 --board SRPSE30A002RU
 
 # Recovery
