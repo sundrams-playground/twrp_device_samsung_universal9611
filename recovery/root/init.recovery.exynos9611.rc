@@ -9,13 +9,9 @@ on late-init
     setprop sys.usb.configfs 1
     setprop sys.usb.config adb
 
-on fs
-    export ANDROID_ROOT /system
 
-    wait /dev/block/platform/13520000.ufs
-    symlink /dev/block/platform/13520000.ufs /dev/block/bootdevice
-    symlink /dev/block/platform/13520000.ufs/by-name /dev/block/by-name
-    symlink /dev/block/platform/13520000.ufs/by-name/param /dev/block/param
+on fs
+    symlink /dev/block/by-name/${ro.boot.super_partition} /dev/block/by-name/super
 
 on boot
     setprop sys.usb.config adb
